@@ -19,7 +19,7 @@ export default function ListaReceitas() {
     <ul className="receitas">
       {receitas.map((r) => (
         <li key={r.id}>
-          <Link to={`/receita/`}>
+          <Link to={`/receita/${r.id}`}>
             <ion-icon name="fast-food-outline"></ion-icon>
             {r.titulo}
           </Link>

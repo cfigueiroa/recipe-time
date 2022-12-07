@@ -8,7 +8,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Receitas />} />
-        <Route path="/receita" element={<Receita />} />
+        <Route path="/receita/:variavelLegal" element={<Receita />} />
       </Routes>
     </BrowserRouter>
   );

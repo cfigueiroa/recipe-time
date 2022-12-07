@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function Receita() {
-  const id = 816;
+  const params = useParams();
   const [receita, setReceita] = useState({});
 
   useEffect(() => {
     const requisicao = axios.get(
-      `https://mock-api.bootcamp.respondeai.com.br/api/v2/tastecamp/receitas/${id}`
+      `https://mock-api.bootcamp.respondeai.com.br/api/v2/tastecamp/receitas/${params.variavelLegal}`
     );
 
     requisicao.then((res) => {
